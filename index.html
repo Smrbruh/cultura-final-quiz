@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <header class="creator-header">
-  <span class="creator-name">Bakdaulet Sotsial</span>
-  <a href="https://instagram.com/smrbruh" target="_blank" rel="noopener" class="creator-ig">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    @smrbruh
-  </a>
-</header>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎭</text></svg>" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cultura QUIZ</title>
@@ -33,23 +25,7 @@
     --wrong-bg: #fde8e8;
     --neutral-bg: #f0ebe0;
     --border: rgba(201,168,76,0.25);
-    --bg-primary: #f5f0e8;
-    --bg-card: #fffdf7;
-    --text-primary: #1a1208;
-    --border-light: rgba(201,168,76,0.25);
   }
-
-[data-theme="dark"] {
-  --bg-primary: #121212;
-  --bg-card: #1e1e1e;
-  --text-primary: #e8e2d4;
-  --border-light: rgba(201,168,76,0.35);
-  --cream: #121212;
-  --card-bg: #1e1e1e;
-  --ink: #e8e2d4;
-  --neutral-bg: #2a2a2a;
-  --shadow: rgba(0,0,0,0.4);
-}
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -63,49 +39,6 @@
     overflow-x: hidden;
     position: relative;
   }
-  :root {
-  --header-name-color: #111827;
-  --header-gh-color: #9ca3af;
-  --header-gh-hover: #4b5563;
-  --header-border: rgba(0, 0, 0, 0.08);
-}
-
-[data-theme="dark"] {
-  --header-name-color: #ffffff;
-  --header-gh-color: rgba(255, 255, 255, 0.5);
-  --header-gh-hover: rgba(255, 255, 255, 0.85);
-  --header-border: rgba(255, 255, 255, 0.08);
-}
-
-.creator-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 0.85rem;
-  border-bottom: 1px solid var(--header-border);
-}
-
-.creator-name {
-  font-weight: 600;
-  color: var(--header-name-color);
-  letter-spacing: -0.01em;
-}
-
-.creator-ig {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  color: var(--header-gh-color);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.creator-ig:hover {
-  color: var(--header-gh-hover);
-}
 
   /* Decorative background pattern */
   body::before {
@@ -144,10 +77,6 @@
     padding: 44px 0 28px;
     position: relative;
   }
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-  <span class="theme-icon">🌙</span>
-  <span class="theme-text">Dark</span>
-</button>
 
   .header-ornament {
     display: flex;
@@ -971,36 +900,6 @@
 
   .footer-ornament .ornament-line { max-width: 60px; }
   .footer-ornament span { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold-dark); text-transform: uppercase; }
-  .theme-toggle {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 999;
-  background: var(--gold);
-  border: none;
-  border-radius: 40px;
-  padding: 10px 18px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  font-size: 0.85rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: all 0.2s ease;
-  color: #1a1208;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.02);
-  background: var(--gold-dark);
-  color: white;
-}
-
-.theme-icon {
-  font-size: 1.1rem;
-}
 </style>
 </head>
 <body>
@@ -2211,37 +2110,6 @@ function restartQuiz() {
 // Default qty button active
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.qty-btn')[3].classList.add('active'); // "All" button
-  // Theme toggle functionality
-function initTheme() {
-  const savedTheme = localStorage.getItem('cultura_theme');
-  if (savedTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.getElementById('themeToggle').innerHTML = '<span class="theme-icon">☀️</span><span class="theme-text">Light</span>';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.getElementById('themeToggle').innerHTML = '<span class="theme-icon">🌙</span><span class="theme-text">Dark</span>';
-  }
-}
-
-function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme');
-  if (current === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('cultura_theme', 'light');
-    document.getElementById('themeToggle').innerHTML = '<span class="theme-icon">🌙</span><span class="theme-text">Dark</span>';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('cultura_theme', 'dark');
-    document.getElementById('themeToggle').innerHTML = '<span class="theme-icon">☀️</span><span class="theme-text">Light</span>';
-  }
-}
-
-// Добавь это в DOMContentLoaded или вызови в конце:
-document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  const themeBtn = document.getElementById('themeToggle');
-  if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
-});
 });
 </script>
 </body>

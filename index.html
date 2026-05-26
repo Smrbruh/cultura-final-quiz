@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <header class="creator-header">
+  <span class="creator-name">Bakdaulet Sotsial</span>
+  <a href="https://instagram.com/smrbruh" target="_blank" rel="noopener" class="creator-ig">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    @smrbruh
+  </a>
+</header>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎭</text></svg>" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultura QUIZ</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --ink: #1a1208;
+    --cream: #f5f0e8;
+    --gold: #c9a84c;
+    --gold-light: #e8d5a3;
+    --gold-dark: #8a6820;
+    --sienna: #8b3a2a;
+    --sage: #4a6741;
+    --lapis: #1e3a5f;
+    --lapis-light: #2d5490;
+    --card-bg: #fffdf7;
+    --shadow: rgba(26,18,8,0.12);
+    --correct: #2d6a4f;
+    --correct-bg: #d8f3dc;
+    --wrong: #7b2d2d;
+    --wrong-bg: #fde8e8;
+    --neutral-bg: #f0ebe0;
+    --border: rgba(201,168,76,0.25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  :root {
+  --header-name-color: #111827;
+  --header-gh-color: #9ca3af;
+  --header-gh-hover: #4b5563;
+  --header-border: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+  --header-name-color: #ffffff;
+  --header-gh-color: rgba(255, 255, 255, 0.5);
+  --header-gh-hover: rgba(255, 255, 255, 0.85);
+  --header-border: rgba(255, 255, 255, 0.08);
+}
+
+.creator-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--header-border);
+}
+
+.creator-name {
+  font-weight: 600;
+  color: var(--header-name-color);
+  letter-spacing: -0.01em;
+}
+
+.creator-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--header-gh-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.creator-ig:hover {
+  color: var(--header-gh-hover);
+}
+
+  /* Decorative background pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 15% 20%, rgba(201,168,76,0.07) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 80%, rgba(30,58,95,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 50%, rgba(139,58,42,0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Ornamental border lines */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 20%, var(--sienna) 50%, var(--gold) 80%, transparent 100%);
+    z-index: 100;
+  }
+
+  .app {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    padding: 44px 0 28px;
+    position: relative;
+  }
+
+  .header-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .ornament-line {
+    flex: 1;
+    max-width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+
+  .ornament-line.right {
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .ornament-diamond {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 3px var(--cream), 0 0 0 4px var(--gold-light);
+  }
+
+  .site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 40%, var(--sienna) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .site-subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+
+  /* ── TOPIC SELECTOR ── */
+  #screen-start {
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .start-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 36px 36px 40px;
+    box-shadow: 0 4px 40px var(--shadow), 0 1px 0 var(--border) inset;
+    border: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  .start-intro {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .start-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--lapis);
+    margin-bottom: 8px;
+  }
+
+  .start-intro p {
+    font-size: 0.9rem;
+    color: #5a5040;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .topic-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .topic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+    margin-bottom: 22px;
+  }
+
+  .topic-btn {
+    background: var(--neutral-bg);
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    padding: 11px 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.18s ease;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .topic-btn:hover {
+    background: var(--gold-light);
+    border-color: var(--gold);
+    transform: translateY(-1px);
+  }
+
+  .topic-btn.selected {
+    background: linear-gradient(135deg, #fef3d0, #fde8b8);
+    border-color: var(--gold);
+    color: var(--gold-dark);
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(201,168,76,0.2);
+  }
+
+  .topic-btn .topic-num {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+
+  .topic-btn.selected .topic-num { color: var(--sienna); }
+
+  .topic-all-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--lapis), var(--lapis-light));
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 14px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all 0.18s ease;
+    margin-bottom: 20px;
+  }
+
+  .topic-all-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(30,58,95,0.25); }
+  .topic-all-btn.active { background: linear-gradient(135deg, var(--lapis-light), var(--lapis)); box-shadow: 0 0 0 3px rgba(30,58,95,0.2); }
+
+  .qty-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+
+  .qty-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #5a5040;
+    flex-shrink: 0;
+  }
+
+  .qty-btns { display: flex; gap: 7px; flex-wrap: wrap; }
+
+  .qty-btn {
+    background: var(--neutral-bg);
+    border: 1.5px solid transparent;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .qty-btn.active {
+    background: var(--gold-light);
+    border-color: var(--gold);
+    color: var(--gold-dark);
+    font-weight: 600;
+  }
+
+  .start-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+  }
+
+  .start-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,0.4); }
+  .start-btn:active { transform: translateY(0); }
+
+  /* ── QUIZ SCREEN ── */
+  #screen-quiz { display: none; }
+  #screen-quiz.active { display: block; animation: fadeUp 0.4s ease both; }
+
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0 14px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .quiz-meta {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 0.82rem;
+    flex-wrap: wrap;
+  }
+
+  .q-counter {
+    font-weight: 600;
+    color: var(--lapis);
+    font-size: 0.88rem;
+  }
+
+  .score-badge {
+    display: flex;
+    gap: 10px;
+  }
+
+  .badge {
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .badge-correct { background: var(--correct-bg); color: var(--correct); }
+  .badge-wrong { background: var(--wrong-bg); color: var(--wrong); }
+
+  .topic-tag {
+    background: linear-gradient(135deg, #e8edf7, #d6e0f2);
+    color: var(--lapis);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .progress-wrap {
+    background: #e5dfd3;
+    border-radius: 8px;
+    height: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+    border-radius: 8px;
+    transition: width 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-bar::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+
+  .question-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 32px 32px 28px;
+    box-shadow: 0 4px 40px var(--shadow), 0 1px 0 rgba(255,255,255,0.9) inset;
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .question-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--sienna));
+  }
+
+  .difficulty-pip {
+    position: absolute;
+    top: 20px; right: 24px;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+
+  .diff-easy { background: #e8f5e9; color: #2e7d32; }
+  .diff-medium { background: #fff3e0; color: #e65100; }
+  .diff-hard { background: #fce4ec; color: #880e4f; }
+
+  .question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.02rem, 2.5vw, 1.22rem);
+    line-height: 1.55;
+    color: var(--ink);
+    padding-right: 80px;
+    margin-bottom: 26px;
+  }
+
+  .answers-grid {
+    display: grid;
+    gap: 10px;
+  }
+
+  .answer-btn {
+    background: var(--neutral-bg);
+    border: 1.5px solid transparent;
+    border-radius: 12px;
+    padding: 14px 18px;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--ink);
+    line-height: 1.45;
+    transition: all 0.17s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-weight: 400;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .answer-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.6), transparent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .answer-btn:hover:not(:disabled) {
+    background: #ede7d3;
+    border-color: var(--gold);
+    transform: translateX(3px);
+    box-shadow: 0 2px 16px rgba(201,168,76,0.15);
+  }
+
+  .answer-btn:hover:not(:disabled)::before { opacity: 1; }
+
+  .answer-letter {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: white;
+    border: 1.5px solid #d0c8b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--gold-dark);
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: all 0.17s;
+    letter-spacing: 0.03em;
+  }
+
+  .answer-btn:hover:not(:disabled) .answer-letter {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: white;
+  }
+
+  .answer-btn.correct {
+    background: var(--correct-bg) !important;
+    border-color: var(--correct) !important;
+    color: var(--correct) !important;
+    font-weight: 600;
+  }
+
+  .answer-btn.correct .answer-letter {
+    background: var(--correct);
+    border-color: var(--correct);
+    color: white;
+  }
+
+  .answer-btn.wrong {
+    background: var(--wrong-bg) !important;
+    border-color: var(--wrong) !important;
+    color: var(--wrong) !important;
+    font-weight: 600;
+  }
+
+  .answer-btn.wrong .answer-letter {
+    background: var(--wrong);
+    border-color: var(--wrong);
+    color: white;
+  }
+
+  .answer-btn:disabled {
+    cursor: default;
+    transform: none !important;
+  }
+
+  .answer-icon {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+
+  .feedback-box {
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    margin-top: 16px;
+    display: none;
+    animation: fadeUp 0.3s ease both;
+  }
+
+  .feedback-box.correct {
+    background: var(--correct-bg);
+    border-left: 3px solid var(--correct);
+    color: var(--correct);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .feedback-box.wrong {
+    background: var(--wrong-bg);
+    border-left: 3px solid var(--wrong);
+    color: var(--wrong);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .feedback-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+  .nav-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    border-radius: 10px;
+    padding: 11px 22px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.17s ease;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .btn-prev {
+    background: var(--neutral-bg);
+    color: var(--ink);
+    border: 1.5px solid #d0c8b8;
+  }
+
+  .btn-prev:hover { background: #e5dfd3; border-color: var(--gold); }
+  .btn-prev:disabled { opacity: 0.35; cursor: default; }
+
+  .btn-next {
+    background: linear-gradient(135deg, var(--lapis), var(--lapis-light));
+    color: white;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 3px 14px rgba(30,58,95,0.2);
+  }
+
+  .btn-next:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(30,58,95,0.3); }
+  .btn-next:disabled { opacity: 0.4; cursor: default; transform: none; }
+
+  .btn-finish {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: white;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 3px 14px rgba(201,168,76,0.25);
+  }
+
+  .btn-finish:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,168,76,0.35); }
+
+  /* ── RESULTS SCREEN ── */
+  #screen-results { display: none; }
+  #screen-results.active { display: block; animation: fadeUp 0.5s ease both; }
+
+  .results-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: 0 4px 40px var(--shadow);
+    border: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .results-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--sienna));
+  }
+
+  .results-ornament {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .results-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+
+  .label-excellent { color: var(--sage); }
+  .label-good { color: var(--lapis); }
+  .label-average { color: #b86e00; }
+  .label-review { color: var(--sienna); }
+
+  .results-subtitle {
+    font-size: 0.88rem;
+    color: #6a5f4e;
+    margin-bottom: 30px;
+  }
+
+  .score-ring-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .score-ring {
+    width: 150px; height: 150px;
+    position: relative;
+  }
+
+  .score-ring svg { transform: rotate(-90deg); }
+
+  .score-ring-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .score-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .score-pct-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #9a8878;
+    margin-top: 3px;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .stat-box {
+    background: var(--neutral-bg);
+    border-radius: 12px;
+    padding: 14px 24px;
+    min-width: 110px;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-correct .stat-num { color: var(--correct); }
+  .stat-wrong .stat-num { color: var(--wrong); }
+  .stat-total .stat-num { color: var(--lapis); }
+
+  .stat-lbl { font-size: 0.75rem; color: #7a6d5e; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  .results-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-review {
+    background: linear-gradient(135deg, var(--sienna), #a8503e);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 26px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.17s;
+  }
+
+  .btn-review:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(139,58,42,0.3); }
+
+  .btn-restart {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 26px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.17s;
+  }
+
+  .btn-restart:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(201,168,76,0.35); }
+
+  /* ── REVIEW SCREEN ── */
+  #screen-review { display: none; }
+  #screen-review.active { display: block; animation: fadeUp 0.4s ease both; }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 0 18px;
+    flex-wrap: wrap;
+  }
+
+  .review-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sienna);
+    flex: 1;
+  }
+
+  .btn-back {
+    background: var(--neutral-bg);
+    border: 1.5px solid #d0c8b8;
+    border-radius: 9px;
+    padding: 8px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--ink);
+    transition: all 0.15s;
+  }
+
+  .btn-back:hover { background: #e5dfd3; border-color: var(--gold); }
+
+  .review-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px 26px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 20px var(--shadow);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--sienna);
+  }
+
+  .review-q-num {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sienna);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .review-q-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .review-answers-list { display: grid; gap: 6px; }
+
+  .review-ans {
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 400;
+  }
+
+  .review-ans.correct-ans { background: var(--correct-bg); color: var(--correct); font-weight: 600; }
+  .review-ans.your-wrong { background: var(--wrong-bg); color: var(--wrong); font-weight: 600; }
+  .review-ans.neutral { background: var(--neutral-bg); color: #6a5f4e; }
+
+  .review-ans-icon { font-size: 1rem; flex-shrink: 0; }
+
+  .no-mistakes {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--correct);
+  }
+
+  .no-mistakes-icon { font-size: 3rem; margin-bottom: 16px; }
+  .no-mistakes h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .no-mistakes p { font-size: 0.88rem; color: #5a5040; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+
+  .answer-btn.correct { animation: pulse 0.4s ease; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 580px) {
+    .start-card { padding: 24px 20px 28px; }
+    .question-card { padding: 22px 18px 20px; }
+    .results-card { padding: 28px 20px; }
+    .review-card { padding: 18px 18px; }
+    .topic-grid { grid-template-columns: 1fr; }
+    .question-text { padding-right: 60px; font-size: 1rem; }
+    .nav-row { gap: 8px; }
+    .nav-btn { padding: 11px 16px; font-size: 0.82rem; }
+    .score-ring { width: 130px; height: 130px; }
+    .score-pct { font-size: 1.9rem; }
+    .stats-row { gap: 10px; }
+    .stat-box { min-width: 90px; padding: 12px 16px; }
+    .stat-num { font-size: 1.5rem; }
+    .difficulty-pip { top: 16px; right: 16px; }
+  }
+
+  /* ── FOOTER ── */
+  .footer-ornament {
+    text-align: center;
+    padding: 30px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-ornament .ornament-line { max-width: 60px; }
+  .footer-ornament span { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold-dark); text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+    <h1 class="site-title">Cultura QUIZ</h1>
+    <p class="site-subtitle">Cultural Studies · Kazakhstan · World Civilizations</p>
+  </header>
+
+  <!-- START SCREEN -->
+  <div id="screen-start">
+    <div class="start-card">
+      <div class="start-intro">
+        <h2>Choose Your Topics</h2>
+        <p>Select one or more topics to focus your quiz, or test yourself across all 10 modules of Cultural Studies.</p>
+      </div>
+
+      <p class="topic-label">Select Topics</p>
+      <button class="topic-all-btn active" id="btn-all-topics" onclick="toggleAllTopics()">✦ All Topics (Recommended)</button>
+
+      <div class="topic-grid" id="topic-grid">
+        <button class="topic-btn" data-topic="0" onclick="toggleTopic(0)">
+          <span class="topic-num">Topic 1</span>Morphology of Culture &amp; Language
+        </button>
+        <button class="topic-btn" data-topic="1" onclick="toggleTopic(1)">
+          <span class="topic-num">Topic 2</span>Semiotics &amp; Anatomy of Culture
+        </button>
+        <button class="topic-btn" data-topic="2" onclick="toggleTopic(2)">
+          <span class="topic-num">Topic 3</span>Nomads' Culture of Kazakhstan
+        </button>
+        <button class="topic-btn" data-topic="3" onclick="toggleTopic(3)">
+          <span class="topic-num">Topic 4</span>Medieval Culture of Central Asia
+        </button>
+        <button class="topic-btn" data-topic="4" onclick="toggleTopic(4)">
+          <span class="topic-num">Topic 5</span>Formation of Kazakh Culture
+        </button>
+        <button class="topic-btn" data-topic="5" onclick="toggleTopic(5)">
+          <span class="topic-num">Topic 6</span>Kazakh Culture in the XX Century
+        </button>
+        <button class="topic-btn" data-topic="6" onclick="toggleTopic(6)">
+          <span class="topic-num">Topic 7</span>Modern World Processes
+        </button>
+        <button class="topic-btn" data-topic="7" onclick="toggleTopic(7)">
+          <span class="topic-num">Topic 8</span>Kazakh Culture &amp; Globalization
+        </button>
+        <button class="topic-btn" data-topic="8" onclick="toggleTopic(8)">
+          <span class="topic-num">Topic 9</span>Cultural Policies of Kazakhstan
+        </button>
+        <button class="topic-btn" data-topic="9" onclick="toggleTopic(9)">
+          <span class="topic-num">Topic 10</span>Heritage, Tradition &amp; Identity
+        </button>
+      </div>
+
+      <div class="qty-row">
+        <span class="qty-label">Questions:</span>
+        <div class="qty-btns">
+          <button class="qty-btn" onclick="setQty(10)">10</button>
+          <button class="qty-btn" onclick="setQty(20)">20</button>
+          <button class="qty-btn" onclick="setQty(40)">40</button>
+          <button class="qty-btn active" onclick="setQty(0)">All</button>
+        </div>
+      </div>
+
+      <button class="start-btn" onclick="startQuiz()">Begin Quiz →</button>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div id="screen-quiz">
+    <div class="quiz-header">
+      <div class="quiz-meta">
+        <span class="q-counter" id="q-counter">Question 1 / 20</span>
+        <div class="score-badge">
+          <span class="badge badge-correct" id="badge-correct">✓ 0</span>
+          <span class="badge badge-wrong" id="badge-wrong">✗ 0</span>
+        </div>
+      </div>
+      <span class="topic-tag" id="topic-tag">Topic 1</span>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progress-bar" style="width:0%"></div>
+    </div>
+
+    <div class="question-card">
+      <span class="difficulty-pip" id="diff-pip">Easy</span>
+      <p class="question-text" id="question-text">Loading question...</p>
+      <div class="answers-grid" id="answers-grid"></div>
+      <div class="feedback-box" id="feedback-box">
+        <span class="feedback-icon" id="feedback-icon"></span>
+        <span id="feedback-text"></span>
+      </div>
+    </div>
+
+    <div class="nav-row">
+      <button class="nav-btn btn-prev" id="btn-prev" onclick="prevQuestion()" disabled>← Back</button>
+      <button class="nav-btn btn-next" id="btn-next" onclick="nextQuestion()" disabled>Next →</button>
+      <button class="nav-btn btn-finish" id="btn-finish" onclick="finishQuiz()" style="display:none">Finish Quiz ✦</button>
+    </div>
+  </div>
+
+  <!-- RESULTS SCREEN -->
+  <div id="screen-results">
+    <div class="results-card">
+      <span class="results-ornament" id="results-ornament">🏆</span>
+      <h2 class="results-label" id="results-label">Excellent!</h2>
+      <p class="results-subtitle" id="results-subtitle">Outstanding performance on your cultural studies quiz.</p>
+
+      <div class="score-ring-wrap">
+        <div class="score-ring">
+          <svg viewBox="0 0 150 150" width="150" height="150">
+            <circle cx="75" cy="75" r="60" fill="none" stroke="#e5dfd3" stroke-width="12"/>
+            <circle cx="75" cy="75" r="60" fill="none" stroke="url(#ringGrad)" stroke-width="12"
+              stroke-linecap="round" stroke-dasharray="377" id="ring-circle" stroke-dashoffset="377"/>
+            <defs>
+              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#8a6820"/>
+                <stop offset="100%" style="stop-color:#c9a84c"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="score-ring-text">
+            <span class="score-pct" id="score-pct">0%</span>
+            <span class="score-pct-label">Score</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box stat-correct">
+          <div class="stat-num" id="stat-correct">0</div>
+          <div class="stat-lbl">Correct</div>
+        </div>
+        <div class="stat-box stat-wrong">
+          <div class="stat-num" id="stat-wrong">0</div>
+          <div class="stat-lbl">Incorrect</div>
+        </div>
+        <div class="stat-box stat-total">
+          <div class="stat-num" id="stat-total">0</div>
+          <div class="stat-lbl">Total</div>
+        </div>
+      </div>
+
+      <div class="results-actions">
+        <button class="btn-review" onclick="showReview()">Review Mistakes</button>
+        <button class="btn-restart" onclick="restartQuiz()">← New Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEW SCREEN -->
+  <div id="screen-review">
+    <div class="review-header">
+      <h2 class="review-title">✦ Mistake Review</h2>
+      <button class="btn-back" onclick="backToResults()">← Results</button>
+    </div>
+    <div id="review-list"></div>
+  </div>
+
+  <div class="footer-ornament">
+    <div class="ornament-line"></div>
+    <span>Cultural Studies · Astana</span>
+    <div class="ornament-line right"></div>
+  </div>
+
+</div>
+
+<script>
+/* ========================================================
+   QUESTION DATABASE — 120 Questions across 10 topics
+======================================================== */
+const ALL_QUESTIONS = [
+
+  // ─── TOPIC 1: Morphology of Culture & Language of Culture ───
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"easy",
+   q:"What is the Latin root verb from which the modern word 'culture' derives?",
+   opts:["cultura (to cultivate, inhabit, honor)","civilitas (city life)","humanitas (humanity)","lingua (language)"],
+   ans:0},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"easy",
+   q:"Which Roman philosopher introduced the concept of 'cultura animi' (cultivation of the soul) in his work Tusculanae Disputationes?",
+   opts:["Aristotle","Cicero","Plato","Marcus Aurelius"],
+   ans:1},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"easy",
+   q:"According to Edward B. Tylor's 1871 definition, what does culture or civilization include?",
+   opts:["Only the arts and philosophy","Knowledge, belief, art, morals, law, custom, and capabilities acquired as a member of society","Material objects and technology exclusively","Written language and formal institutions"],
+   ans:1},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"medium",
+   q:"Which American anthropologist introduced the term 'cultural studies' to denote the science of culture and is known as one of the founders of neo-evolutionism?",
+   opts:["Alfred Kroeber","Clyde Kluckhohn","Leslie Alvin White","Franz Boas"],
+   ans:2},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"medium",
+   q:"In 1952, Kroeber and Kluckhohn compiled over 200 definitions of culture, organizing them into how many categories?",
+   opts:["Five","Six","Seven","Eight"],
+   ans:3},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"medium",
+   q:"Which category of culture definition emphasizes 'ideals, values, norms, or standards for life'?",
+   opts:["Behavioral","Functional","Normative","Symbolic"],
+   ans:2},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"medium",
+   q:"Richard Dawkins introduced the concept of the 'meme' in which year and which book?",
+   opts:["1972, The Gene Machine","1976, The Selfish Gene","1980, Cultural Transmission","1984, The Extended Phenotype"],
+   ans:1},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"hard",
+   q:"In sociobiological theory, what is the final stage of cultural acquisition beyond memes and themes?",
+   opts:["Schemas","Dreams or rituals","Archetypes","Paradigms"],
+   ans:1},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"easy",
+   q:"In the morphology of culture, what is the term for the unity of the physical and metaphysical realms seen in early civilizations?",
+   opts:["Animism","Totemism","Syncretism","Symbolism"],
+   ans:2},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"medium",
+   q:"How does civilization differ from culture according to the lecture material?",
+   opts:["Civilization is internal (values, beliefs) while culture is external (tools, buildings)","Civilization is external (tools, cities, technology) while culture is internal (values, norms, beliefs)","They are completely identical concepts","Civilization refers only to ancient societies"],
+   ans:1},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"medium",
+   q:"The symbolic view of culture associated with Clifford Geertz holds that symbols are:",
+   opts:["Purely decorative elements of society","Both practices of social actors and the context giving those practices meaning","Biological instincts expressed culturally","The material products of labor only"],
+   ans:1},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"hard",
+   q:"In Marxist theory, how is culture understood?",
+   opts:["As an autonomous sphere independent of economics","As closely connected to material production and social relations, reflecting transformations of nature and society","As the pure expression of individual creativity","As unchanging spiritual heritage"],
+   ans:1},
+
+  // ─── TOPIC 2: Semiotics of Culture & Anatomy of Culture ───
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"easy",
+   q:"Who introduced the concept of cultural semiotics, treating culture as a system of signs, in the 20th century?",
+   opts:["Roland Barthes","Ferdinand de Saussure","Yuri Lotman","Umberto Eco"],
+   ans:2},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"easy",
+   q:"According to Ferdinand de Saussure, a sign is composed of which two elements?",
+   opts:["Icon and symbol","Signifier and signified","Denotation and connotation","Sign vehicle and interpretant"],
+   ans:1},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"medium",
+   q:"In Peirce's typology, what type of sign has a logical or causal connection to its referent (e.g., smoke indicating fire)?",
+   opts:["Icon","Symbol","Index","Myth"],
+   ans:2},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"medium",
+   q:"What term did Charles Peirce use for the mental concept or understanding created by a sign?",
+   opts:["Signified","Designatum","Interpretant","Semiosis"],
+   ans:2},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"medium",
+   q:"Roland Barthes defined myth in cultural semiotics as:",
+   opts:["An ancient narrative about gods","A second-order system of signs carrying ideological meaning","A linguistic error or metaphor","A ritual performance in primitive societies"],
+   ans:1},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"easy",
+   q:"Charles Morris divided semiotics into three subfields. Which of the following is NOT one of them?",
+   opts:["Semantics","Syntactics","Pragmatics","Hermeneutics"],
+   ans:3},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"hard",
+   q:"Julia Kristeva's concept of 'semanalysis' was developed as an alternative to whose semiology?",
+   opts:["Roland Barthes","Charles Peirce","Ferdinand de Saussure","Yuri Lotman"],
+   ans:2},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"medium",
+   q:"Yuri Lotman described culture as 'a unified whole made up of inherited information that society accumulates, preserves, and transmits.' What did he call the core unit of this process?",
+   opts:["The meme","The text","The myth","The code"],
+   ans:1},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"medium",
+   q:"Olzhas Suleymanov's book 'Az and Ya' (Aziia) challenges traditional narratives by analyzing which medieval text?",
+   opts:["The Epic of Gilgamesh","The Quran","The Song of Igor's Campaign","The Mahabharata"],
+   ans:2},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"hard",
+   q:"In Charles Morris's semiotic framework, which component refers to the actual object or concept that a sign refers to?",
+   opts:["Sign vehicle","Interpreter","Designatum","Interpretant"],
+   ans:2},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"medium",
+   q:"Lev Vygotsky argued that language functions as a powerful cognitive tool. His concept of 'inner speech' refers to:",
+   opts:["Speaking loudly to communicate with others","The external expression of written language","Language that becomes internal, guiding decisions and behavior from within","A primitive form of communication before grammar"],
+   ans:2},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"hard",
+   q:"According to the lecture, what distinguishes Saussure's European semiotic tradition from Peirce's American tradition?",
+   opts:["Saussure focused on language structure and meaning-within-systems; Peirce focused on types of signs and cognitive interpretation","Saussure studied mythology; Peirce studied grammar","Saussure was interested in cultural artifacts; Peirce studied ancient symbols","Both studied identical phenomena using different terminology"],
+   ans:0},
+
+  // ─── TOPIC 3: Nomads' Culture of Kazakhstan / Proto-Turkic People ───
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"easy",
+   q:"What was the supreme deity in the ancient Turkic belief system known as Tengriism?",
+   opts:["Irlik","Joltengri","Tengri","Yer"],
+   ans:2},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"easy",
+   q:"In ancient Turkic mythology, 'Joltengri' was known as:",
+   opts:["The god of fire","The god of the way, a symbol of daring and freedom, messenger of Tengri","The supreme deity of heaven","The god who takes souls of the dead to the sky"],
+   ans:1},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"medium",
+   q:"Which Scythian philosopher became a member of the Areopagus in Athens, participated in Olympic Games, and met the statesman Solon?",
+   opts:["Toxaris","Darius","Anacharsis","Herodotus"],
+   ans:2},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"medium",
+   q:"The concept of 'digital nomadism' as analyzed by Manuel Castells refers to:",
+   opts:["Traditional Kazakh herders using smartphones","Mobility that can be both virtual (internet) and global physical movement","A critique of modern tourism","Ancient nomadic trade routes now mapped digitally"],
+   ans:1},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"easy",
+   q:"What was the primary function of the Kazakh yurt in nomadic life?",
+   opts:["A permanent stone fortress for defense","A portable dwelling perfectly adapted to the steppe environment, allowing quick assembly for seasonal migration","A religious temple for Tengriist rituals","A market for trading goods"],
+   ans:1},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"medium",
+   q:"Tengriism is described in the lectures as an ancient belief system that connects natural elements such as the sky, mountains, and rivers to:",
+   opts:["Trade and commerce","Political authority","Spiritual life","Agricultural practices"],
+   ans:2},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"hard",
+   q:"In which century did the Karahanid state proclaim Islam as its state religion, marking the end of Islamization in the Eurasian steppe?",
+   opts:["8th century","9th century","10th century","11th century"],
+   ans:2},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"medium",
+   q:"According to the lecture, what religious and philosophical influences penetrated the Turkic world before the final adoption of Islam?",
+   opts:["Only Christianity","Zoroastrianism, Mithraism, Buddhism, Nestorianism, and Manichaeism","Only Shamanism","Greek polytheism and Roman paganism"],
+   ans:1},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"hard",
+   q:"The Scythian figure Toxaris was described by Lucian of Samosata as which profession in ancient Athens?",
+   opts:["A military general","A philosopher and teacher","A healer/doctor, revered after his death during the Athens plague","A merchant and trader"],
+   ans:2},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"medium",
+   q:"Which nomadic Kazakh practice is considered a perfect example of 'cultural ecology in action' according to Julian Stewart's framework?",
+   opts:["Urban architecture and city planning","Seasonal migrations, livestock herding, and use of pastures as the basis of identity and ritual","Written literary traditions","Iron-smelting and metalwork"],
+   ans:1},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"easy",
+   q:"The Kazakh spring festival Nauryz symbolizes:",
+   opts:["The harvest of winter wheat","Renewal, fertility, and the start of the agricultural cycle","The commemoration of ancestors","Victory in battle"],
+   ans:1},
+
+  // ─── TOPIC 4: Medieval Culture of Central Asia / Turkic Heritage ───
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"easy",
+   q:"What was the title earned by Al-Farabi that placed him second only to Aristotle?",
+   opts:["Al-Hakim (the Wise)","Muallim al-Thani (the Second Teacher)","Al-Rais (the Chief)","Khoja (the Master)"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"easy",
+   q:"Al-Farabi was born in which Central Asian city?",
+   opts:["Samarkand","Bukhara","Otrar","Taraz"],
+   ans:2},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"medium",
+   q:"Yusuf Balasaguni's epic poem 'Kutadgu Bilig,' written in 1069–1070, translates into Russian as:",
+   opts:["The Epic of Heroic Nomads","The Science to be Happy / Blessed Knowledge","The Book of Governance","Hymns to the Eternal Blue Sky"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"medium",
+   q:"Mahmud al-Kashgari's dictionary is significant because it is described as:",
+   opts:["The first scientific work in Arabic linguistics","The only surviving source of detailed information about Turkic life in the Middle Ages, covering material culture, ethnonyms, and daily life","A collection of Sufi poetry","The earliest known Kazakh grammar"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"easy",
+   q:"What were the three main structural parts of a medieval Central Asian settlement as described in the lectures?",
+   opts:["Palace, mosque, bazaar","Citadel, shahristan, and rabad","Fort, suburb, and cemetery","Center, periphery, and market"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"medium",
+   q:"Which city was the capital of the Chui Valley and became an important political and cultural hub during the Karakhanid period?",
+   opts:["Taraz","Otrar","Balasagun","Ispijab"],
+   ans:2},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"hard",
+   q:"Al-Farabi synthesized achievements from which multiple cultural traditions in his work?",
+   opts:["Only Greek and Arabic","Arab, Persian, Greek, Indian, and Turkish cultures","Chinese, Mongol, and Persian","Byzantine, Roman, and Islamic"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"medium",
+   q:"Sufism is described as emerging from 9th century Iraq and entering Kazakhstan by which centuries?",
+   opts:["7th–8th centuries","11th–12th centuries","13th–14th centuries","15th–16th centuries"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"medium",
+   q:"The word 'Sufism' in the Western tradition derives from the Arabic word 'suf,' meaning:",
+   opts:["Wisdom","Wool","Light","Peace"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"hard",
+   q:"A distinctive feature of Kazakh Sufism that blended with pre-Islamic shamanism was:",
+   opts:["Silent meditation in isolation","The loud dhikr — a remembrance ceremony involving singing, chanting, and dancing","Strict textual study of the Quran without music","Pilgrimage to Mecca above all other practices"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"medium",
+   q:"The mausoleum of Khoja Ahmed Yasawi in Turkestan is associated with which cultural and architectural achievement?",
+   opts:["A Mongol-era fortification","A designed cultural landscape elevated by Timur's architectural legacy","The first Karahanid mosque","The administrative center of the White Horde"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"hard",
+   q:"Al-Farabi's major work 'Treatise on the Views of the Residents of the Virtuous City' explores:",
+   opts:["The geography of Central Asia","Philosophical, sociological, and ethical norms for ideal governance","A commentary on the Quran","Mathematical principles of astronomy"],
+   ans:1},
+
+  // ─── TOPIC 5: Formation of Kazakh Culture, XVIII–Late XIX Century ───
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"easy",
+   q:"Kurmangazy Saginbayev is celebrated as a master of Kazakh musical tradition. On which instrument did he primarily compose?",
+   opts:["Kobyz","Violin","Dombra","Zhongur"],
+   ans:2},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"medium",
+   q:"Kurmangazy composed his masterpiece 'Saryarka,' which uses light tonalities to depict:",
+   opts:["The suffering of nomads under colonial rule","The endless expanse of the Kazakh steppe landscape","A Sufi spiritual journey","The victory of the Kazakh khans"],
+   ans:1},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"medium",
+   q:"What literary-cultural movement emerged in the 19th century, defined by pessimism, anti-colonial sentiment, and mourning of the nomadic way of life?",
+   opts:["Aytys tradition","Zhyrau epic tradition","Zarzaman (Era of Sorrow)","Batyrlar jyry (Heroes' Epic)"],
+   ans:2},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"medium",
+   q:"Who is considered the founder of the Zarzaman literary trend and authored the poem 'Zarzaman' denouncing the post-annexation reality?",
+   opts:["Dulat Babatayuly","Shortanbai Kanaiuly","Abai Kunanbayev","Murat Monkeuly"],
+   ans:1},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"hard",
+   q:"Tattimbet Kazangapuly is recognized as the founder of which classical Dombra performance style?",
+   opts:["Tokpe style (virtuosic strumming)","Shertpe style (lyrical and delicate technique)","Zhyrau style (epic narrative)","Aytys style (competitive improvisation)"],
+   ans:1},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"medium",
+   q:"Jaiau Musa Baizhanov is significant in Kazakh cultural history because he:",
+   opts:["Composed the first Kazakh opera","Introduced the violin to the Kazakh steppe after studying music in Omsk","Led the national liberation struggle of 1837","Wrote the first Kazakh novel"],
+   ans:1},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"easy",
+   q:"The term 'Zarzaman' literally translates as:",
+   opts:["Era of Heroes","Era of Sorrow or Troubled Times","Era of Enlightenment","Era of Independence"],
+   ans:1},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"hard",
+   q:"The national liberation struggle of the 1830s, which deeply influenced Kurmangazy's music, was led by:",
+   opts:["Kenesary Kasimov","Isatay Taimanov and Makhambet Utemisov","Abulkhair Khan","Abai Kunanbayev"],
+   ans:1},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"medium",
+   q:"The Zarzaman poets primarily criticized which new social class that profited from the market economy?",
+   opts:["Bi (judges/mediators)","Batyr (warriors)","Bayism — a class of wealthy Kazakhs","Zhyrau (epic poets)"],
+   ans:2},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"hard",
+   q:"Which Kazakh intellectual analyzed the 'Song of Igor's Campaign' and argued that much of world history cannot be understood without knowledge of Turkic history?",
+   opts:["Mukhtar Auezov","Olzhas Suleymanov","Kanesh Satpayev","Abai Kunanbayev"],
+   ans:1},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"medium",
+   q:"Sufism's pilgrimage culture in Kazakhstan is sustained around sacred sites including:",
+   opts:["Almaty, Astana, and Shymkent","Khoja Ahmed Yasawi, Arstanbab, and Beket-Ata shrines","Altai, Balkhash, and the Caspian Shore","Otrar, Taraz, and Balasagun ruins"],
+   ans:1},
+
+  // ─── TOPIC 6: Kazakh Culture in the XX Century ───
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"easy",
+   q:"What was the key cultural-educational priority in Soviet Kazakhstan during the pre-war period?",
+   opts:["Building opera houses and theaters","Elimination of illiteracy and creation of a Soviet system of education","Publishing Kazakh folk epics","Developing nomadic infrastructure"],
+   ans:1},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"medium",
+   q:"Kazakhstan's independence was declared on which date, marking the beginning of a new stage of cultural development?",
+   opts:["October 25, 1990","December 16, 1991","March 21, 1992","November 1, 1993"],
+   ans:1},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"medium",
+   q:"Which Kazakh writer published the novel 'Abai,' receiving a first-degree prize in the USSR and describing the work as an 'Encyclopedia of Kazakh People's Lives'?",
+   opts:["Sabit Mukanov","Ilyas Esenberlin","Mukhtar Auezov","Gabit Musrepov"],
+   ans:2},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"medium",
+   q:"The first Kazakh national pedagogical university (named after Abai) opened in which year?",
+   opts:["1920","1924","1928","1934"],
+   ans:2},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"hard",
+   q:"The Kazakh State University named after Kirov (now Al-Farabi Kazakh National University) opened in which year?",
+   opts:["1928","1930","1934","1946"],
+   ans:2},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"medium",
+   q:"The Academy of Science of Kazakhstan was opened in which year and became an important scientific center?",
+   opts:["1934","1938","1942","1946"],
+   ans:3},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"medium",
+   q:"During the Soviet era, Sufi brotherhoods in Kazakhstan were:",
+   opts:["State-sponsored and openly promoted","Banned and officially denied, but continued underground","Transformed into communist youth organizations","Merged with the Russian Orthodox Church"],
+   ans:1},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"hard",
+   q:"Baurzhan Momyshuly is remembered not only as a military hero of World War II but also for:",
+   opts:["Composing Kazakh operas","Writing books and developing a fighting method inspired by Saka warriors","Founding the first Kazakh cinema studio","Translating Russian classics into Kazakh"],
+   ans:1},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"medium",
+   q:"The first Kazakh opera, 'Birzhan sara,' was written by which composer?",
+   opts:["Akhmet Zhubanov","Mukan Tulebayev","Mukhtar Auezov","A collaboration between Kazakh and Russian composers"],
+   ans:1},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"medium",
+   q:"The literacy level of Kazakhstan's population under age 15 reached approximately what percentage by 1939?",
+   opts:["54%","68%","83%","97%"],
+   ans:2},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"hard",
+   q:"During World War II, Kazakhstan's higher education system paradoxically benefited because:",
+   opts:["The war budget was redirected to universities","Evacuated Russian and Ukrainian universities and their professors came to Kazakhstan, raising academic quality","Kazakhstan received UNESCO educational funding","All Kazakh soldiers were educated in the USSR after the war"],
+   ans:1},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"medium",
+   q:"The first Soviet-era painting studio in Kazakhstan was opened in 1920 in Almaty by which Russian artist?",
+   opts:["Ilya Repin","Nikolai Khludov","Vasily Surikov","Pavel Tretyakov"],
+   ans:1},
+
+  // ─── TOPIC 7: Kazakh Culture in the Context of Modern World Processes ───
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"easy",
+   q:"Globalization is broadly defined in the lectures as:",
+   opts:["The policy of national isolation","The formation and extension of relationships and interdependence of countries in economics, military, finance, information, and technology","The cultural superiority of Western nations","The modernization of only developing countries"],
+   ans:1},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"medium",
+   q:"Some scholars argue globalization began in medieval times because:",
+   opts:["Ancient Greeks invented international law","Trade as the main activity connected East and West, creating communication and shared rules","The Roman Empire united all known civilizations","The Silk Road was built by a global consortium"],
+   ans:1},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"medium",
+   q:"In Hofstede's Cultural Dimensions theory, Kazakhstan is characterized as a:",
+   opts:["Highly individualistic, low power distance society","Collectivistic culture with high power distance and high uncertainty avoidance","Low uncertainty avoidance, short-term orientation society","Feminine, low power distance culture"],
+   ans:1},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"hard",
+   q:"In Hofstede's framework, Kazakhstan scores high on 'uncertainty avoidance index,' meaning:",
+   opts:["Kazakhs are very willing to take personal risks","New innovation is difficult to introduce and development is slower than in low-uncertainty cultures","Kazakhstan has a flexible, open attitude toward change","Uncertainty avoidance measures how much people gamble"],
+   ans:1},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"medium",
+   q:"Kazakhstan is described as having a 'long-term orientation' in Hofstede's model. This is evidenced by:",
+   opts:["A preference for instant gratification","Government plans extending to 2030 and 2050, showing pragmatic long-term planning","Rejection of all foreign investment","Strong short-term consumption patterns"],
+   ans:1},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"medium",
+   q:"In Hofstede's 'indulgence vs. restraint' dimension, Kazakhstan and Russia are classified as:",
+   opts:["High-indulgence societies with free gratification of emotions","Moderate-indulgence societies","Low-indulgence societies with stricter social norms and regulation of behavior","Neither country has been measured"],
+   ans:2},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"easy",
+   q:"In Hofstede's Power Distance Index, Kazakhstan has a high score, indicating that:",
+   opts:["Power is equally distributed among all citizens","Society accepts unequal hierarchical distribution of power and people understand their place in the system","Teachers and bosses are frequently challenged","There are no social hierarchies"],
+   ans:1},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"hard",
+   q:"Digital nomadism as analyzed in the lectures is associated with which Italian scientist's concept of 'nomadic clothing'?",
+   opts:["Umberto Eco","Manuel Castells","Leonida Fortunati","Irina Kushnareva-Sagan"],
+   ans:2},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"medium",
+   q:"Contemporary Kazakh art is described as navigating tension between:",
+   opts:["Marxist realism and postmodern abstraction","Traditional nomadic heritage and global modernization processes","European classical and East Asian influences","Religious conservatism and secular liberalism exclusively"],
+   ans:1},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"medium",
+   q:"According to Hofstede's 'masculinity vs. femininity' dimension, Kazakhstan is considered:",
+   opts:["A purely feminine society valuing modesty and cooperation","Approximately 50-50, though many consider it more masculine","A highly feminine society with strong gender overlap","Not applicable to Central Asian contexts"],
+   ans:1},
+
+  // ─── TOPIC 8: Kazakh Culture in the Context of Globalization ───
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"easy",
+   q:"Sociologist Roland Robertson defined globalization as:",
+   opts:["The dominance of one culture over others","The increasing interconnectedness and interdependence of societies through exchange of information, goods, ideas, and culture worldwide","The economic colonization of developing nations","The spread of Western democratic values globally"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"medium",
+   q:"According to the lectures, which cultural theorist suggested that cultures are never fixed but constantly evolving through 'hybridity'?",
+   opts:["Samuel Huntington","Benedict Anderson","Homi Bhabha","Michel Foucault"],
+   ans:2},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"medium",
+   q:"The Bayterek Tower in Astana symbolizes which traditional Turkic concept?",
+   opts:["The Islamic crescent and star","The Turkic Tree of Life with a golden egg signifying rebirth and continuity","The Soviet legacy of industrial progress","The Kazakh flag's sun and steppe eagle"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"medium",
+   q:"Khan Shatyr in Astana was designed by which architect, blending a nomadic tent shape with modern materials?",
+   opts:["Kazakh architect Ahmurza Rustembek","British architect Norman Foster","Kazakh architect Sarandyk Zhambaulatov","Japanese architect Kenzo Tange"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"hard",
+   q:"Kazakh scholar Tursyn Gabitov argues that cultural evolution means:",
+   opts:["Rejecting traditional practices in favor of global norms","Not rejecting tradition but transforming it — selectively borrowing, synthesizing, and filtering changes through traditional norms","Preserving culture unchanged as a museum artifact","Adopting Western liberal values as the framework for development"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"medium",
+   q:"The Pyramid of Peace and Reconciliation in Astana was also designed by Norman Foster and embodies:",
+   opts:["Military power and national sovereignty","Interfaith harmony reflecting Kazakhstan's multi-ethnic and tolerant identity","The legacy of Soviet architecture","Futuristic technology and space exploration"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"easy",
+   q:"Which traditional Kazakh musical instruments are mentioned as struggling to find a place in everyday modern life, increasingly limited to ceremonial use?",
+   opts:["Piano and violin","Dombra and kobyz","Guitar and drums","Accordion and flute"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"medium",
+   q:"A 2018 UNESCO report on Kazakhstan emphasized that maintaining balance between tradition and innovation is essential for what?",
+   opts:["Military security","Economic growth","Sustainable cultural development where innovation revitalizes tradition","Diplomatic relations with Russia and China"],
+   ans:2},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"hard",
+   q:"From a semiotic viewpoint, Astana's architecture is significant because:",
+   opts:["It copies European capital cities to signal modernity","It communicates national values, history, and identity as semiotic texts blending Turkic myths, Islamic culture, and futuristic design","It deliberately erases Kazakh cultural memory","It was designed entirely by foreign architects with no local input"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"medium",
+   q:"The Hazret Sultan Mosque in Astana is notable as:",
+   opts:["The oldest mosque in Central Asia","The largest mosque in Central Asia, representing Islamic heritage","A Sufi shrine dedicated to Ahmed Yasawi","A UNESCO World Heritage Site since 2001"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"hard",
+   q:"Globalization poses a specific linguistic threat to Kazakhstan in that:",
+   opts:["English is replacing Kazakh as the official language","The Kazakh language faces challenges from both Russian and English","Russian has been officially replaced by Kazakh since 1991","Kazakh is endangered only in rural areas"],
+   ans:1},
+
+  // ─── TOPIC 9: Cultural Policies of Kazakhstan ───
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"easy",
+   q:"Kazakhstan's State Cultural Policy Program is primarily aimed at:",
+   opts:["Eliminating cultural diversity in favor of a unified national identity","Development of a single multinational cultural space and formation of Kazakh mentality and spirituality","Promoting only the Russian-speaking cultural minority","Isolating Kazakhstan from international cultural processes"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"medium",
+   q:"Which two theoretical schools frame the debates on cultural policy in Kazakhstan?",
+   opts:["Marxism and liberalism","Modernization theory and multiculturalism","Nationalism and cosmopolitanism","Structuralism and post-colonialism"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"medium",
+   q:"The concept of multiculturalism in cultural policy suggests:",
+   opts:["Assimilation of minorities into the dominant culture","Equal respect for various cultures, promoting diversity while refraining from both assimilation and segregation","Segregation of ethnic groups into separate regions","The superiority of the titular Kazakh culture"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"hard",
+   q:"Kazakhstan joined the Eurasian Customs Union with Russia and Belarus in which year?",
+   opts:["2005","2008","2010","2014"],
+   ans:2},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"medium",
+   q:"The 'national idea' in philosophy is described in the lectures as:",
+   opts:["A marketing strategy for national tourism","General description of national awareness that determines the meaning of existence for a nation, ethnos, and state","A political party platform","A form of cultural propaganda"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"medium",
+   q:"Cultural policy debates in Kazakhstan parallel debates in which Western European countries over multiculturalism and immigration integration?",
+   opts:["UK, Spain, Sweden","France, Italy, Germany","Portugal, Greece, Poland","Netherlands, Belgium, Denmark"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"hard",
+   q:"One concept in Kazakhstan's cultural policy promotes 'development of cultural geographical clusters,' which would lead to:",
+   opts:["Concentrating all culture in Nur-Sultan and Almaty","Creation of a cultural and tourism complex across multiple regions, not just the capital","Privatization of all museums and libraries","Elimination of regional cultural differences"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"easy",
+   q:"The objectives of Kazakhstan's cultural policy program include integration of national culture into:",
+   opts:["Only the Central Asian cultural space","The global cultural space","The Eurasian Economic Union cultural space","The UNESCO world heritage list exclusively"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"medium",
+   q:"Critics of multiculturalism in Kazakhstan's cultural policy debate argue that:",
+   opts:["All cultures are equal and should be given equal resources","Maintaining distinct cultures within modern nation-state settings may undermine social cohesion","Kazakh language should be abandoned in favor of Russian and English","Only traditional nomadic culture deserves protection"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"hard",
+   q:"The deeper debate about cultural policy in Kazakhstan divides society into those who favor strengthening national cultural identity versus those who believe in:",
+   opts:["Islamic integration and Pan-Turkism","Opportunities provided by globalization and integrating Kazakh culture into the rapidly globalizing world as a competitive force","Total Westernization without preserving tradition","Soviet-era cultural policies"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"medium",
+   q:"The concept of 'cultural shock,' mentioned in lecture 9.2 on cultural policy, relates to:",
+   opts:["An extreme form of culture pride","Disorientation experienced when encountering a foreign cultural environment","The shock of discovering pre-Soviet Kazakh history","A Soviet-era approach to cultural reform"],
+   ans:1},
+
+  // ─── TOPIC 10: Cultural Heritage, Tradition, Innovation & Identity ───
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"easy",
+   q:"What field of study, associated with Julian Stewart, explores how human culture and the natural environment are interlinked?",
+   opts:["Cultural morphology","Cultural ecology","Ethnobotany","Political anthropology"],
+   ans:1},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"medium",
+   q:"According to UNESCO's operational guidelines, cultural landscapes represent:",
+   opts:["Purely natural environments with no human interference","The combined works of nature and of man, reflecting the interaction between human culture and the natural environment over time","Only architectural masterpieces and monuments","Sacred religious sites exclusively"],
+   ans:1},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"medium",
+   q:"Which type of cultural landscape is 'intentionally shaped and created by people, often for specific purposes like gardens, parks, or architectural ensembles'?",
+   opts:["Organically evolved landscape","Associative landscape","Designed and created landscape","Heritage landscape"],
+   ans:2},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"medium",
+   q:"Ulytau in Kazakhstan is classified as which type of cultural landscape?",
+   opts:["A designed and created landscape built for religious purposes","An organically evolved landscape shaped by agriculture","An associative landscape with cultural, spiritual, and symbolic value linked to Kazakh myths and ancestral past","A heritage landscape based on economic significance"],
+   ans:2},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"easy",
+   q:"Which institutions are described as the primary 'carriers of cultural memory' in Kazakhstan's heritage preservation system?",
+   opts:["Foreign embassies and international NGOs","Cultural institutions (museums), educational institutions (schools/universities), and government initiatives","Private corporations and tech companies","Political parties and military institutions"],
+   ans:1},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"hard",
+   q:"Kazakhstan's UNESCO World Heritage natural sites include Saryarka (steppe and lakes) and which other key designation?",
+   opts:["The Aral Sea","Tien Shan mountains and cold winter deserts of Turan","The Altai Mountains exclusive zone","The Volga River delta"],
+   ans:1},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"medium",
+   q:"The key insight of the final lecture is that Kazakhstan's cultural heritage is described as:",
+   opts:["Frozen in the past and must be preserved unchanged","A living, adaptive entity deeply embedded in the land, language, and people","Primarily threatened and on the verge of extinction","Fully modernized and no longer dependent on traditional practices"],
+   ans:1},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"medium",
+   q:"Traditional ecological knowledge in Kazakhstan's nomadic culture is gaining renewed attention because:",
+   opts:["It is required by EU environmental law","Centuries of pastoralist expertise in animal husbandry, water use, and pasture management are relevant to contemporary environmental challenges","It attracts UNESCO funding for Kazakhstan","It is the most popular academic subject in Kazakhstan"],
+   ans:1},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"hard",
+   q:"Cultural resilience, according to the concluding lecture, is fundamentally about:",
+   opts:["Protecting only physical artifacts and monuments","Protecting the system of knowledge, rituals, landscapes, and stories that define cultural identity","Achieving economic development through tourism","Political sovereignty and military strength"],
+   ans:1},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"medium",
+   q:"The 'hybrid model' proposed for Kazakhstan's cultural future advocates:",
+   opts:["Replacing tradition with innovation entirely","Rejecting global influences and preserving only pre-modern practices","Embracing innovation that revitalizes tradition while preserving identity in global engagement","Copying Western European cultural policy models directly"],
+   ans:2},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"medium",
+   q:"The Mausoleum of Khoja Ahmed Yasawi is cited as an example of which type of cultural landscape?",
+   opts:["Organically evolved landscape","Associative landscape","Designed and created landscape — intentionally planned for religious and cultural purposes","A natural heritage site"],
+   ans:2},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"easy",
+   q:"The three main challenges faced by Kazakhstan's cultural ecology in the modern era include urbanization reducing grazing lands, pollution threatening ecosystems, and:",
+   opts:["Tourism damaging ancient sites","Loss of biodiversity impacting traditional knowledge like medicinal practices","Internet replacing oral traditions entirely","Soviet-era collectivization of nomadic lands"],
+   ans:1},
+
+  // ─── BONUS MIXED HARD QUESTIONS ───
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"hard",
+   q:"During the Renaissance, culture became associated with humanistic ideals of the 'well-rounded individual.' Which artworks are specifically cited as examples in the lecture?",
+   opts:["The Last Supper and the Sistine Chapel ceiling","Michelangelo's David and Raphael's Sistine Madonna","The School of Athens and Vitruvian Man","The Birth of Venus and The Starry Night"],
+   ans:1},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"hard",
+   q:"According to Yuri Lotman, a 'text' in cultural semiotics can be:",
+   opts:["Only written or printed literary works","Any cultural artifact that carries meaning — a novel, ritual, song, monument, or fashion trend","Exclusively verbal language","A scientific formula or mathematical proof"],
+   ans:1},
+
+  {topic:2, topicName:"Nomads' Culture of Kazakhstan · Proto-Turkic Heritage", diff:"hard",
+   q:"According to Russian scientist Ajigulov, Tengriism has its own hierarchy of deities. What is 'Erklik' (Irlik) within this hierarchy?",
+   opts:["The supreme sky deity","The god of the path and freedom","The master of the underworld (this world's ruler)","The messenger who transmits the heavenly code"],
+   ans:2},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"hard",
+   q:"The city of Otrar is significant in medieval Kazakh history because it was:",
+   opts:["The birthplace of Genghis Khan","Al-Farabi's birthplace, a key Silk Road trade hub, and a licensed mint producing gold dinars","The capital of the Karakhanid state","The center of Sufi brotherhoods in Central Asia"],
+   ans:1},
+
+  {topic:4, topicName:"Formation of Kazakh Culture · XVIII–Late XIX Century", diff:"hard",
+   q:"The Zarzaman movement is described as 'apocalyptic' because its poets:",
+   opts:["Predicted the literal end of the world","Presented a vision of a dying world under siege by colonialism, modernity, and spiritual decay, drawing on Islamic eschatological ideas","Believed the Kazakh people were chosen to survive global catastrophe","Rejected Islam in favor of Tengriist revival"],
+   ans:1},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"hard",
+   q:"Baurzhan Momyshuly's fighting method, inspired by ancient Saka warriors, is known as:",
+   opts:["The Steppe Spiral","The Nomadic Arc","The Spiritual Spiral of Bauyrzhan","The Kazakh Defense Circle"],
+   ans:2},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"hard",
+   q:"In Hofstede's framework, countries with short-term orientation typically emphasize:",
+   opts:["Plans extending 20+ years into the future","Principles, consistency, truth, religious and nationalistic values, and quick results","Economic pragmatism over social stability","Collectivism and long-term family loyalty"],
+   ans:1},
+
+  {topic:7, topicName:"Kazakh Culture · Context of Globalization", diff:"hard",
+   q:"The Triumphal Arc 'Mangilik El' in Astana was designed by which architect and symbolizes what?",
+   opts:["Norman Foster; Kazakhstan's international prestige","Kazakh architect Sarandyk Zhambaulatov; Kazakhstan's independence and national unity","Al-Farabi Institute designers; the Tree of Life","Russian architect Zukov; Soviet-era achievements"],
+   ans:1},
+
+  {topic:8, topicName:"Cultural Policies of Kazakhstan", diff:"hard",
+   q:"According to the lecture on cultural policy, Kazakhstan's concept of 'public-private partnership in cultural areas' is intended to:",
+   opts:["Replace all public funding with private investment","Attract private initiatives and international/local funding for promising cultural and tourism projects","Privatize national museums and heritage sites","Remove government oversight from cultural institutions"],
+   ans:1},
+
+  {topic:9, topicName:"Cultural Heritage · Tradition, Innovation & Identity", diff:"hard",
+   q:"Michael Berube's contribution to understanding national identity, as cited in the lecture on cultural ecology, highlights:",
+   opts:["The role of genetics in national identity","That national identity includes understanding of place and landscape as integral to belonging","Economic factors as the primary determinant of cultural identity","The irrelevance of geography in the modern globalized world"],
+   ans:1},
+
+  {topic:0, topicName:"Morphology of Culture · Language of Culture", diff:"hard",
+   q:"In ancient Rome, the word 'cultura' was typically used in combination with an object or area of focus. Which modern equivalents are cited as continuing this tradition?",
+   opts:["Culture wars, culture shock, culture jamming","Intellectual culture, communication culture, physical culture","Cultural capital, cultural hegemony, cultural studies","Cultural revolution, cultural relativity, cultural policy"],
+   ans:1},
+
+  {topic:1, topicName:"Semiotics of Culture · Anatomy of Culture", diff:"hard",
+   q:"According to the lecture, in Peirce's model, 'semiosis' describes:",
+   opts:["The fixed relationship between a word and its dictionary definition","An iterative process where each interpretation becomes a new sign leading to another interpretation — unlimited chain of meaning-making","A binary opposition between signifier and signified","The social context in which language is used"],
+   ans:1},
+
+  {topic:3, topicName:"Medieval Culture of Central Asia · Heritage of the Turks", diff:"hard",
+   q:"In medieval Central Asian cities, the 'rabad' referred to:",
+   opts:["The fortified inner citadel housing the ruler's palace","The central nucleus of the city including the ruler's residence","A suburban craft settlement located outside the shahristan","An Islamic school attached to the main mosque"],
+   ans:2},
+
+  {topic:5, topicName:"Kazakh Culture in the XX Century", diff:"hard",
+   q:"The Soviet cultural policy under Stalin turned schools into tools for propagating Stalinist ideology. A specific consequence was that textbooks by which intellectuals were withdrawn from curricula?",
+   opts:["Al-Farabi, Yusuf Balasaguni, Al-Kashgari","Baitursynov, Asfemdiyarov, Seitkali, Dosmukhambetov and other Kazakh intelligentsia","Lenin, Trotsky, and Bukharin","Pushkin, Tolstoy, and Dostoyevsky"],
+   ans:1},
+
+  {topic:6, topicName:"Kazakh Culture · Modern World Processes", diff:"hard",
+   q:"Irina Kushnareva-Sagan's contribution to the analysis of digital nomadism was her argument that:",
+   opts:["All forms of nomadism are primitive and should be replaced by settled life","Digital nomadism is a social-cultural phenomenon conceptually connected to modern information and communication technologies","The internet eliminates the need for physical migration","Kazakhstan's nomadic heritage has no relevance to the digital economy"],
+   ans:1},
+];
+
+/* ========================================================
+   QUIZ STATE
+======================================================== */
+let quizQuestions = [];
+let currentIdx = 0;
+let userAnswers = {};
+let selectedTopics = [];
+let qtyLimit = 0;
+let shuffledAnswers = {};
+let isAllTopics = true;
+
+/* ========================================================
+   TOPIC SELECTION
+======================================================== */
+function toggleAllTopics() {
+  isAllTopics = true;
+  selectedTopics = [];
+  document.getElementById('btn-all-topics').classList.add('active');
+  document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('selected'));
+}
+
+function toggleTopic(idx) {
+  isAllTopics = false;
+  document.getElementById('btn-all-topics').classList.remove('active');
+  const btn = document.querySelector(`.topic-btn[data-topic="${idx}"]`);
+  const pos = selectedTopics.indexOf(idx);
+  if (pos > -1) {
+    selectedTopics.splice(pos, 1);
+    btn.classList.remove('selected');
+  } else {
+    selectedTopics.push(idx);
+    btn.classList.add('selected');
+  }
+  if (selectedTopics.length === 0) toggleAllTopics();
+}
+
+let activeQty = 0;
+function setQty(n) {
+  activeQty = n;
+  document.querySelectorAll('.qty-btn').forEach(b => b.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+}
+
+/* ========================================================
+   SHUFFLE UTILITY
+======================================================== */
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/* ========================================================
+   START QUIZ
+======================================================== */
+function startQuiz() {
+  let pool;
+  if (isAllTopics || selectedTopics.length === 0) {
+    pool = [...ALL_QUESTIONS];
+  } else {
+    pool = ALL_QUESTIONS.filter(q => selectedTopics.includes(q.topic));
+  }
+
+  pool = shuffle(pool);
+  if (activeQty > 0 && pool.length > activeQty) pool = pool.slice(0, activeQty);
+
+  quizQuestions = pool;
+  currentIdx = 0;
+  userAnswers = {};
+  shuffledAnswers = {};
+
+  // Pre-shuffle answers for all questions
+  quizQuestions.forEach((q, qi) => {
+    const indexed = q.opts.map((o, i) => ({text: o, orig: i}));
+    const shuffled = shuffle(indexed);
+    shuffledAnswers[qi] = shuffled;
+  });
+
+  document.getElementById('screen-start').style.display = 'none';
+  const quizScreen = document.getElementById('screen-quiz');
+  quizScreen.classList.add('active');
+  renderQuestion();
+}
+
+/* ========================================================
+   RENDER QUESTION
+======================================================== */
+function renderQuestion() {
+  const q = quizQuestions[currentIdx];
+  const total = quizQuestions.length;
+
+  // Header
+  document.getElementById('q-counter').textContent = `Question ${currentIdx + 1} / ${total}`;
+  document.getElementById('topic-tag').textContent = q.topicName;
+
+  // Score badges
+  const correct = Object.values(userAnswers).filter(a => a.isCorrect).length;
+  const wrong = Object.values(userAnswers).filter(a => !a.isCorrect).length;
+  document.getElementById('badge-correct').textContent = `✓ ${correct}`;
+  document.getElementById('badge-wrong').textContent = `✗ ${wrong}`;
+
+  // Progress
+  const pct = ((currentIdx) / total) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
+
+  // Difficulty pip
+  const pip = document.getElementById('diff-pip');
+  pip.textContent = q.diff.charAt(0).toUpperCase() + q.diff.slice(1);
+  pip.className = 'difficulty-pip diff-' + q.diff;
+
+  // Question text
+  document.getElementById('question-text').textContent = q.q;
+
+  // Answers
+  const grid = document.getElementById('answers-grid');
+  grid.innerHTML = '';
+  const shuffled = shuffledAnswers[currentIdx];
+  const letters = ['A', 'B', 'C', 'D'];
+  const answered = userAnswers[currentIdx];
+
+  shuffled.forEach((opt, si) => {
+    const btn = document.createElement('button');
+    btn.className = 'answer-btn';
+    btn.setAttribute('data-si', si);
+
+    let cls = '';
+    let icon = '';
+    if (answered !== undefined) {
+      btn.disabled = true;
+      if (opt.orig === q.ans) { cls = ' correct'; icon = '<span class="answer-icon">✓</span>'; }
+      else if (answered.selectedShuffle === si) { cls = ' wrong'; icon = '<span class="answer-icon">✗</span>'; }
+    }
+    btn.className += cls;
+
+    btn.innerHTML = `<span class="answer-letter">${letters[si]}</span><span>${opt.text}</span>${icon}`;
+    if (answered === undefined) {
+      btn.addEventListener('click', () => selectAnswer(si, opt.orig, btn));
+    }
+    grid.appendChild(btn);
+  });
+
+  // Feedback
+  const fb = document.getElementById('feedback-box');
+  if (answered !== undefined) {
+    fb.style.display = 'flex';
+    if (answered.isCorrect) {
+      fb.className = 'feedback-box correct';
+      document.getElementById('feedback-icon').textContent = '✓';
+      document.getElementById('feedback-text').textContent = 'Correct! Well done.';
+    } else {
+      fb.className = 'feedback-box wrong';
+      document.getElementById('feedback-icon').textContent = '✗';
+      const correctText = q.opts[q.ans];
+      document.getElementById('feedback-text').textContent = `Incorrect. The correct answer is: "${correctText}"`;
+    }
+  } else {
+    fb.style.display = 'none';
+    fb.className = 'feedback-box';
+  }
+
+  // Navigation buttons
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+  const btnFinish = document.getElementById('btn-finish');
+
+  btnPrev.disabled = currentIdx === 0;
+
+  const isLast = currentIdx === total - 1;
+  if (isLast) {
+    btnNext.style.display = 'none';
+    btnFinish.style.display = 'flex';
+    btnFinish.disabled = answered === undefined;
+  } else {
+    btnNext.style.display = 'flex';
+    btnFinish.style.display = 'none';
+    btnNext.disabled = answered === undefined;
+  }
+}
+
+/* ========================================================
+   SELECT ANSWER
+======================================================== */
+function selectAnswer(shuffleIdx, origIdx, clickedBtn) {
+  const q = quizQuestions[currentIdx];
+  const isCorrect = origIdx === q.ans;
+
+  userAnswers[currentIdx] = { selectedShuffle: shuffleIdx, selectedOrig: origIdx, isCorrect };
+
+  // Highlight all buttons
+  const grid = document.getElementById('answers-grid');
+  const allBtns = grid.querySelectorAll('.answer-btn');
+  const shuffled = shuffledAnswers[currentIdx];
+
+  allBtns.forEach((btn, si) => {
+    btn.disabled = true;
+    const opt = shuffled[si];
+    if (opt.orig === q.ans) {
+      btn.classList.add('correct');
+      btn.innerHTML += '<span class="answer-icon">✓</span>';
+    } else if (si === shuffleIdx && !isCorrect) {
+      btn.classList.add('wrong');
+      btn.innerHTML += '<span class="answer-icon">✗</span>';
+    }
+  });
+
+  // Show feedback
+  const fb = document.getElementById('feedback-box');
+  fb.style.display = 'flex';
+  if (isCorrect) {
+    fb.className = 'feedback-box correct';
+    document.getElementById('feedback-icon').textContent = '✓';
+    document.getElementById('feedback-text').textContent = 'Correct! Well done.';
+  } else {
+    fb.className = 'feedback-box wrong';
+    document.getElementById('feedback-icon').textContent = '✗';
+    document.getElementById('feedback-text').textContent = `Incorrect. The correct answer is: "${q.opts[q.ans]}"`;
+  }
+
+  // Enable navigation
+  const isLast = currentIdx === quizQuestions.length - 1;
+  if (isLast) {
+    document.getElementById('btn-finish').disabled = false;
+  } else {
+    document.getElementById('btn-next').disabled = false;
+  }
+
+  // Update score badges
+  const correct = Object.values(userAnswers).filter(a => a.isCorrect).length;
+  const wrong = Object.values(userAnswers).filter(a => !a.isCorrect).length;
+  document.getElementById('badge-correct').textContent = `✓ ${correct}`;
+  document.getElementById('badge-wrong').textContent = `✗ ${wrong}`;
+}
+
+/* ========================================================
+   NAVIGATION
+======================================================== */
+function nextQuestion() {
+  if (currentIdx < quizQuestions.length - 1) {
+    currentIdx++;
+    renderQuestion();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+}
+
+function prevQuestion() {
+  if (currentIdx > 0) {
+    currentIdx--;
+    renderQuestion();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+}
+
+/* ========================================================
+   FINISH QUIZ
+======================================================== */
+function finishQuiz() {
+  const total = quizQuestions.length;
+  const correct = Object.values(userAnswers).filter(a => a.isCorrect).length;
+  const wrong = total - correct;
+  const pct = Math.round((correct / total) * 100);
+
+  // Determine label
+  let label, subtitle, ornament, labelClass;
+  if (pct >= 90) { label = 'Excellent!'; subtitle = 'Outstanding performance. You have a deep command of cultural studies.'; ornament = '🏆'; labelClass = 'label-excellent'; }
+  else if (pct >= 75) { label = 'Good'; subtitle = 'Strong performance! A few concepts are worth revisiting.'; ornament = '⭐'; labelClass = 'label-good'; }
+  else if (pct >= 55) { label = 'Average'; subtitle = 'Decent effort. Review the topics where you made mistakes.'; ornament = '📚'; labelClass = 'label-average'; }
+  else { label = 'Needs Review'; subtitle = 'Take time to revisit the lecture materials and try again.'; ornament = '📖'; labelClass = 'label-review'; }
+
+  document.getElementById('results-ornament').textContent = ornament;
+  document.getElementById('results-label').textContent = label;
+  document.getElementById('results-label').className = 'results-label ' + labelClass;
+  document.getElementById('results-subtitle').textContent = subtitle;
+  document.getElementById('score-pct').textContent = pct + '%';
+  document.getElementById('stat-correct').textContent = correct;
+  document.getElementById('stat-wrong').textContent = wrong;
+  document.getElementById('stat-total').textContent = total;
+
+  // Animate ring
+  const circumference = 377;
+  const offset = circumference - (pct / 100) * circumference;
+  setTimeout(() => {
+    document.getElementById('ring-circle').style.transition = 'stroke-dashoffset 1.2s ease';
+    document.getElementById('ring-circle').style.strokeDashoffset = offset;
+  }, 300);
+
+  document.getElementById('screen-quiz').classList.remove('active');
+  document.getElementById('screen-quiz').style.display = '';
+  const resultsScreen = document.getElementById('screen-results');
+  resultsScreen.classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/* ========================================================
+   REVIEW MISTAKES
+======================================================== */
+function showReview() {
+  const mistakes = [];
+  quizQuestions.forEach((q, idx) => {
+    const a = userAnswers[idx];
+    if (a && !a.isCorrect) mistakes.push({q, idx, a});
+  });
+
+  const list = document.getElementById('review-list');
+  list.innerHTML = '';
+
+  if (mistakes.length === 0) {
+    list.innerHTML = `
+      <div class="no-mistakes">
+        <div class="no-mistakes-icon">🎉</div>
+        <h3>No Mistakes!</h3>
+        <p>You answered every question correctly. Remarkable!</p>
+      </div>`;
+  } else {
+    mistakes.forEach((m, mi) => {
+      const shuffled = shuffledAnswers[m.idx];
+      const letters = ['A', 'B', 'C', 'D'];
+
+      let answersHtml = '';
+      shuffled.forEach((opt, si) => {
+        let cls = 'neutral';
+        let icon = '';
+        if (opt.orig === m.q.ans) { cls = 'correct-ans'; icon = '✓'; }
+        else if (si === m.a.selectedShuffle) { cls = 'your-wrong'; icon = '✗'; }
+        answersHtml += `<div class="review-ans ${cls}"><span class="review-ans-icon">${icon || '·'}</span><strong>${letters[si]}.</strong> ${opt.text}</div>`;
+      });
+
+      const card = document.createElement('div');
+      card.className = 'review-card';
+      card.innerHTML = `
+        <div class="review-q-num">Question ${m.idx + 1} · ${m.q.topicName}</div>
+        <div class="review-q-text">${m.q.q}</div>
+        <div class="review-answers-list">${answersHtml}</div>`;
+      list.appendChild(card);
+    });
+  }
+
+  document.getElementById('screen-results').classList.remove('active');
+  document.getElementById('screen-review').classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function backToResults() {
+  document.getElementById('screen-review').classList.remove('active');
+  document.getElementById('screen-results').classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/* ========================================================
+   RESTART
+======================================================== */
+function restartQuiz() {
+  document.getElementById('screen-results').classList.remove('active');
+  document.getElementById('screen-review').classList.remove('active');
+  document.getElementById('screen-quiz').classList.remove('active');
+  document.getElementById('screen-quiz').style.display = '';
+
+  // Reset ring
+  document.getElementById('ring-circle').style.transition = 'none';
+  document.getElementById('ring-circle').style.strokeDashoffset = '377';
+
+  document.getElementById('screen-start').style.display = 'block';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/* ========================================================
+   INIT
+======================================================== */
+// Default qty button active
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.qty-btn')[3].classList.add('active'); // "All" button
+});
+</script>
+</body>
+</html>

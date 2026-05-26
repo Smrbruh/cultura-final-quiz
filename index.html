@@ -33,7 +33,23 @@
     --wrong-bg: #fde8e8;
     --neutral-bg: #f0ebe0;
     --border: rgba(201,168,76,0.25);
+    --bg-primary: #f5f0e8;
+    --bg-card: #fffdf7;
+    --text-primary: #1a1208;
+    --border-light: rgba(201,168,76,0.25);
   }
+
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-card: #1e1e1e;
+  --text-primary: #e8e2d4;
+  --border-light: rgba(201,168,76,0.35);
+  --cream: #121212;
+  --card-bg: #1e1e1e;
+  --ink: #e8e2d4;
+  --neutral-bg: #2a2a2a;
+  --shadow: rgba(0,0,0,0.4);
+}
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -128,6 +144,10 @@
     padding: 44px 0 28px;
     position: relative;
   }
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+  <span class="theme-icon">🌙</span>
+  <span class="theme-text">Dark</span>
+</button>
 
   .header-ornament {
     display: flex;
@@ -951,6 +971,36 @@
 
   .footer-ornament .ornament-line { max-width: 60px; }
   .footer-ornament span { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold-dark); text-transform: uppercase; }
+  .theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background: var(--gold);
+  border: none;
+  border-radius: 40px;
+  padding: 10px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+  color: #1a1208;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.02);
+  background: var(--gold-dark);
+  color: white;
+}
+
+.theme-icon {
+  font-size: 1.1rem;
+}
 </style>
 </head>
 <body>
@@ -2161,6 +2211,37 @@ function restartQuiz() {
 // Default qty button active
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.qty-btn')[3].classList.add('active'); // "All" button
+  // Theme toggle functionality
+function initTheme() {
+  const savedTheme = localStorage.getItem('cultura_theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('themeToggle').innerHTML = '<span class="theme-icon">☀️</span><span class="theme-text">Light</span>';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.getElementById('themeToggle').innerHTML = '<span class="theme-icon">🌙</span><span class="theme-text">Dark</span>';
+  }
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  if (current === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('cultura_theme', 'light');
+    document.getElementById('themeToggle').innerHTML = '<span class="theme-icon">🌙</span><span class="theme-text">Dark</span>';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('cultura_theme', 'dark');
+    document.getElementById('themeToggle').innerHTML = '<span class="theme-icon">☀️</span><span class="theme-text">Light</span>';
+  }
+}
+
+// Добавь это в DOMContentLoaded или вызови в конце:
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  const themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
+});
 });
 </script>
 </body>
